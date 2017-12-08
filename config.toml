@@ -1,0 +1,15 @@
+theme = "material-design"
+baseurl = "http://jaminix.site"
+languageCode = "en-us"
+title = "Software Code Book"
+MetaDataFormat = "toml"
+paginate = 9 # To specify a multiple of 3
+copyright = "© 2017 jaminix.site"
+
+[params]
+  description = "Language driven software development"
+  github = "jaminyah"
+  linkedin = "jaminyah@gmail.com"
+
+[permalinks]
+  post = "/:year/:month/:day/:title/" 
