@@ -6,10 +6,10 @@ draft: true
 
 ####Introduction
 
-```Swift
+{{< highlight swift "linenos=table >}}
 let myString:String = "First string"
 var nxtString:String?
-```
+{{< / highlight >}}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in vestibulum lorem, nec consequat dui. In lacinia neque non turpis luctus, sed scelerisque ligula bibendum. Ut dictum magna ac mauris lobortis, nec fermentum tortor scelerisque. Donec in sem lacinia, sollicitudin risus ut, fermentum est. Vivamus dui ex, accumsan sit amet libero sit amet, fermentum venenatis lacus. Praesent metus elit, luctus eget varius eget, dapibus sit amet est. Sed luctus felis non fermentum feugiat. Maecenas pulvinar orci a massa maximus convallis. Mauris sed augue vitae urna dapibus dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec nisi arcu, fermentum in imperdiet in, accumsan at mi. Quisque ut efficitur orci. Donec pharetra mi a urna vulputate, sed dapibus sapien varius. Suspendisse eu egestas lorem, ac porta nunc. Curabitur egestas dui vel vehicula mattis.
 
