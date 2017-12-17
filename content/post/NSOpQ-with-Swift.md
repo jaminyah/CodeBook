@@ -6,7 +6,7 @@ draft: true
 
 ####Introduction
 
-{{< highlight swift "linenos=table >}}
+{{< highlight swift "linenos=table" >}}
 let myString:String = "First string"
 var nxtString:String?
 {{< / highlight >}}
