@@ -1,15 +1,17 @@
 theme = "material-design"
-baseurl = "http://jaminix.site"
+baseurl = "http://blog.jaminix.net/"
 languageCode = "en-us"
 title = "Software Code Book"
 MetaDataFormat = "toml"
 paginate = 9 # To specify a multiple of 3
-copyright = "© 2017 jaminix.site"
+copyright = "© 2018 jaminix.net"
 
 [params]
   description = "Language driven software development"
   github = "jaminyah"
   linkedin = "jaminyah@gmail.com"
+  [params.isso]
+    server = "localhost:8181"
 
 [permalinks]
   post = "/:year/:month/:day/:title/" 
