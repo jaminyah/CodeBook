@@ -1,0 +1,38 @@
+box: debian
+build:
+  steps:
+    - arjen/hugo-build@1.25.2: 
+
+    # Hugo version
+    version: "0.32.3"
+
+    # Hugo theme
+    theme: material-design
+
+    disable_pygments: true
+
+    # remove public directory before running
+    clean_before: true
+
+    # Production branch
+    prod_branches: master
+
+
+deploy:
+  steps:
+    - install-packages:
+        packages: openssh-client openssh-server
+
+    - add-to-known_hosts:
+        hostname: 45.33.11.216
+        local: true
+
+    # linode_PUBLIC
+    - add-ssh-key:
+        keyname: linode
+
+    # Custom code to update static site on Linode
+    - script:
+        name: Static site update on remote Linode
+        code: |
+          ssh jaminyah@45.33.11.216 git -C ~/hugo.io/codebook pull
