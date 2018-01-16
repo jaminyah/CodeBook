@@ -9,6 +9,8 @@ build:
     # Hugo theme
     theme: material-design
 
+    flags: --buildDrafts=true
+
     disable_pygments: true
 
     # remove public directory before running
@@ -35,4 +37,4 @@ deploy:
     - script:
         name: Static site update on remote Linode
         code: |
-          ssh jaminyah@45.33.11.216 git -C ~/hugo.io/codebook pull
+          ssh jaminyah@45.33.11.216 git -C ~/hugo.io/codebook/ pull
