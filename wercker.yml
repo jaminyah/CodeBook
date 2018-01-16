@@ -24,4 +24,4 @@ deploy:
     - script:
         name: Static site update on remote Linode
         code: |
-          ssh jaminyah@45.33.11.216 git -C /home/jaminyah/hugo.io/codebook/ pull
+          ssh jaminyah@45.33.11.216 git -C /home/jaminyah/sites/CodeBook/ pull
