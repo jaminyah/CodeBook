@@ -4,7 +4,7 @@ build:
     - arjen/hugo-build@1.25.2: 
         version: "0.32.3"
         theme: material-design
-        flags: --buildDrafts=true
+        flags: --buildDrafts=false
         disable_pygments: true
         clean_before: true
         prod_branches: master
