@@ -1,10 +1,14 @@
 ---
-title: "NSOpQ With Swift"
+title: "NSOperationQ With Swift"
 date: 2017-12-08T14:43:46-06:00
 draft: false
+tags: ["iOS", "Swift", "Concurrency"]
+categories: ["Mobile"]
+series: ["Multi-Threading"]
+slug: "hugo"
 ---
 
-#### Introduction
+# Introduction
 
 <pre><code class="swift" style="xcode">
 let myString:String = "First string"
