@@ -47,6 +47,7 @@ footer.page-footer {
   margin: 0;
 }
 
+/* Override Materialize 70 % container width */
 .container {
   margin: 0 auto;
   max-width: 1280px;
@@ -59,4 +60,32 @@ footer.page-footer {
 @media only screen and (min-width: 993px)
   .container {
     width: 70%;
+}
+
+/*
+![your_img](/img/your_img.png#center)
+![your_img](/img/your_img.png#floatleft)
+![your_img](/img/your_img.png#floatright)
+*/
+img[src$='#center']
+{
+    display: block;
+    margin: 0.7rem auto; /* you can replace the vertical '0.7rem' by
+                            whatever floats your boat, but keep the
+                            horizontal 'auto' for this to work */
+    /* whatever else styles you fancy here */
+}
+
+img[src$='#floatleft']
+{
+    float:left;
+    margin: 0.7rem;      /* this margin is totally up to you */
+    /* whatever else styles you fancy here */
+}
+
+img[src$='#floatright']
+{
+    float:right;
+    margin: 0.7rem;      /* this margin is totally up to you */
+    /* whatever else styles you fancy here */
 }
