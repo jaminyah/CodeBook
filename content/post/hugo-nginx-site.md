@@ -97,40 +97,30 @@ Configuration steps for the Linode side can be found at [DNS Manager Overview](/
 
 ### Set Linode Name Servers on Web Hosting
 
-The typical scenario is that you purchased and registered a domain name through one of the popular providers such as Bluehost, Godaddy, or Fatcow. Now, you need to point the domain name to your Linode server. Navigate to the Control Panel on your provider's Control Panel.
-
-We will use Fatcow's Control Panel in this example.
+The typical scenario is that you purchased and registered a domain name through one of the popular providers such as Bluehost, Godaddy, or Fatcow. Now, you need to point the domain name to your Linode server. Navigate to the Control Panel on your provider's Control Panel.We will use Fatcow's Control Panel in this example.
 
 ![Control Panel](/post1/linode/img/ControlPanel.jpg#center)
 
 
-<p align="center">
-  <img src="/images/ControlPanel.jpg" alt="Control Panel" /> 
-</p>
-
 Click on the link that lists all the domains you have registered. In this case I'll click on DomainCentral located in the Domain Tools section.
 
-<p align="center">
-  <img src="/images/MyDomains.jpg" alt="Domain Listing" /> 
-</p>
+![My Domains](/post1/linode/img/MyDomains.jpg#center)
+
 
 From the list of domains select the one you want to point to your Linode server. On selecting that domain name, an overview of various actions that can be taken on the domain name will be presented.
 
-<p align="center">
-  <img src="/images/Overview.jpg" alt="Overview of possible actions" /> 
-</p>
+![Overview of actions](/post1/linode/img/Overview.jpg#center)
+
 
 In this case, I'll select Points to URL icon so as to enter the IP address of my Linode server.
 
-<p align="center">
-  <img src="/images/Pointers.jpg" alt="Point URL to Linode" /> 
-</p>
+![Point URL to Linode](/post1/linode/img/Pointers.jpg#center)
+
 
 Now that the URL is pointing to the IP address of your server on Linode, the Linode name servers need to be added.
 
-<p align="center">
-  <img src="/images/Nameservers.jpg" alt="Name servers" /> 
-</p>
+![Name servers](/post1/linode/img/Nameservers.jpg#center)
+
 
 The following name server entries should be made:
 * ns1.linode.com
@@ -146,21 +136,18 @@ The above is given as an example. Follow the instructions for your specific doma
 
 One to the things you may want to do is add a subdomain to your domain and have this URL point to your blog articles. For example if your domain is `http://example.com` adding a blog subdomain creates `http://blog.example.com`. Navigate to [linode.com](https://www.linode.com/) and log into your Linode server account. Select the DNS Manager tab.
 
-<p align="center">
-  <img src="/images/DNSManager.jpg" alt="DNS Manager" /> 
-</p>
+![DNS Manager](/post1/linode/img/DNSManager.jpg#center)
+
 
 DNS Manager lists domains linked to your Linode account. Let's assume that domains example.com and example.net are associated with this Linode account. Select the first domain in the list and focus on the section titled A/AAAA Records.
 
-<p align="center">
-  <img src="/images/AAAA.jpg" alt="AAAA records" /> 
-</p>
+![AAAA records](/post1/linode/img/AAAA.jpg#center)
+
 
 In A/AAAA Records select the link "Add a new A/AAAA record".  For Hostname add `blog.example.com`. In the IP Address field enter the IP address of your Linode server. 
 
-<p align="center">
-  <img src="/images/EditAAAA.jpg" alt="Editing AAAA records" /> 
-</p>
+![Editing AAAA records](/post1/linode/img/EditingAAAA.jpg#center)
+
 
 {{< note >}}
 Your IP address can be found by selecting the Linodes tab. 
@@ -192,9 +179,8 @@ Further clarification on logging in with SSH can be found in the [Getting starte
 
 If you are getting started with creating static sites with Hugo, the best source of accurate and updated instructions is the Hugo site [Getting Started Quick Start Guide](https://gohugo.io/getting-started/quick-start/). Instructions begin at Step 2: *Create a New Site*. It is important to note that development and unit testing of the static website is performed on your local development machine. 
 
-<p align="center">
-  <img src="/images/sw_dev_sequence.jpg" alt="Software development sequence" /> 
-</p>
+![Software development sequence](/post1/linode/img/sw_dev_sequence.jpg#center)
+
 
 Once code review and system testing are complete, it is then time to check the code into a version control system, such as GitHub. Build and deploy phases are performed next followed by release to production.
 
@@ -203,9 +189,8 @@ Once code review and system testing are complete, it is then time to check the c
 
 Generally, developers focus on writing code, unit testing and incorporating code review changes. For the most part, many developers shy away from the inner details of deploying applications to the production environment. This task is usually handled by the DevOps team or backend crew. In this section, we will discuss moving the static site from the development environment to the production server.
 
-<p align="center">
-  <img src="/images/ProductionCycle.jpg" alt="Production Cycle" /> 
-</p>
+![Production Cycle](/post1/linode/img/ProductionCycle.jpg#center)
+
 
 There are several approaches to deploying a static site, after it has been through the development cycle. [Travis-CI](https://travis-ci.org), [Jenkins](https://jenkins.io), Wercker and [Rsync](https://rsync.samba.org) are among the more popular tools, used to deploy to a production server such as Linode. Let's first discuss using `Rsync`.
 
@@ -216,9 +201,8 @@ There are several approaches to deploying a static site, after it has been throu
 
 You may decide that yours is a small operation and so you develop and test on your local machine as well as use a remote version control service such as GitHub to backup your local files. Then you wish to transfer the files of your static site directly to the Linode production server without an automated build and deploy tool. If this is the case, Rsync is a good tool for manually syncing your files with the production server.
 
-<p align="center">
-  <img src="/images/sw_dev_rsync.jpg" alt="Deploy with Rsync" /> 
-</p>
+![Deploy with Rsync](/post1/linode/img/sw_dev_rsync.jpg#center)
+
 
 Rsync is described in the [Wikipedia](https://en.wikipedia.org/wiki/Rsync) as a tool for "transferring and synchronizing files across computer systems." Consider a static website, mysite, on a local development machine. It is in the home directory with the following folder structure:
 
