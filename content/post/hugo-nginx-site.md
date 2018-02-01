@@ -25,7 +25,7 @@ Hugo is promoted as "...one of the most popular open-source static site generato
 [Hugo](https://gohugo.io/) on Ubuntu 16.04, then discuss installing and configuring [Nginx](http://nginx.org/) as a reverse proxy. We will begin by pointing your registered domain name to Linode name servers. The ultimate goal is to enter a URL such as `http://blog.example.com` in your web browser to display your Hugo blog articles hosted on Linode.
 
 
-## Before You Begin
+### Before You Begin
 
 > The steps in this guide require root privileges. Be sure to run the steps below as `root` or with the `sudo` prefix. For more information on privileges, see our [Users and Groups](/docs/tools-reference/linux-users-and-groups) guide.
 
@@ -60,7 +60,7 @@ Begin by updating Ubuntu if you have an existing Ubuntu installation and have pr
     sudo apt-get update
 
 
-## Guide Overview
+### Guide Overview
 
 This guide provides instructions on developing a static website, with Hugo static site generator, and building and deploying this static site to Linode production servers. When development and testing is completed locally, the site can be built, deployed to production, and kept updated several ways. In this guide two cases are considered. The first case discusses running Hugo server in production with Nginx as reverse proxy. The second case discusses using Nginx to serve the static site. A brief discussion of the major sections of this guide is presented next.
 
@@ -77,7 +77,7 @@ This guide provides instructions on developing a static website, with Hugo stati
 *  __Learning more about Hugo__ - This section includes references to video tutorials and other resources that can be used to gain further practical understanding of using Hugo.
 
 
-## Point Domain name to Linode Servers
+### Point Domain name to Linode Servers
 
 There are two aspects to pointing your registered domain name to your Linode server. 
 1. Linode DNS Manager needs to be configured with your domain name.
@@ -136,7 +136,7 @@ DNS Manager lists domains linked to your Linode account. Let's assume that domai
 
 In A/AAAA Records select the link "Add a new A/AAAA record".  For Hostname add `blog.example.com`. In the IP Address field enter the IP address of your Linode server. 
 
-![Editing AAAA records](/post1/linode/img/EditingAAAA.jpg#center)
+![Edit AAAA records](/post1/linode/img/EditAAAA.jpg#center)
 
 
 > Your IP address can be found by selecting the Linodes tab. 
@@ -156,12 +156,12 @@ Open a Terminal window and log in to your Linode server at the command line with
 Further clarification on logging in with SSH can be found in the [Getting started](/docs/getting-started) guide in the section titled "*Log In for the First Time*". 
 
 
-## Static Site Generator Principles
+### Static Site Generator Principles
 
 Static site generators process website contents to produce html files. In the case of Hugo, running the command `hugo`, at the root of the website contents, creates a folder named public that contains the generated html files. Files in this newly created public folder can now be served with a web server.
 
 
-## The Development Environment: Case I
+### The Development Environment
 
 If you are getting started with creating static sites with Hugo, the best source of accurate and updated instructions is the Hugo site [Getting Started Quick Start Guide](https://gohugo.io/getting-started/quick-start/). Instructions begin at Step 2: *Create a New Site*. It is important to note that development and unit testing of the static website is performed on your local development machine. 
 
@@ -171,7 +171,7 @@ If you are getting started with creating static sites with Hugo, the best source
 Once code review and system testing are complete, it is then time to check the code into a version control system, such as GitHub. Build and deploy phases are performed next followed by release to production.
 
 
-### Building and Updating a Static Site
+#### Building and Updating a Static Site
 
 Generally, developers focus on writing code, unit testing and incorporating code review changes. For the most part, many developers shy away from the inner details of deploying applications to the production environment. This task is usually handled by the DevOps team or backend crew. In this section, we will discuss moving the static site from the development environment to the production server.
 
@@ -181,9 +181,9 @@ Generally, developers focus on writing code, unit testing and incorporating code
 There are several approaches to deploying a static site, after it has been through the development cycle. [Travis-CI](https://travis-ci.org), [Jenkins](https://jenkins.io), Wercker and [Rsync](https://rsync.samba.org) are among the more popular tools, used to deploy to a production server such as Linode. Let's first discuss using `Rsync`.
 
 
-## The Deployment Environment: Case 1
+### The Deployment Environment
 
-### Deploy with Rsync
+#### Deploy with Rsync
 
 You may decide that yours is a small operation and so you develop and test on your local machine as well as use a remote version control service such as GitHub to backup your local files. Then you wish to transfer the files of your static site directly to the Linode production server without an automated build and deploy tool. If this is the case, Rsync is a good tool for manually syncing your files with the production server.
 
@@ -250,12 +250,12 @@ mysite
 
 ```
 
-### Build and Deploy with Wercker 
+#### Build and Deploy with Wercker 
 
 A much better alternative to Rsync is a continuous integration, build automation tool. One such tool is [Wercker](http://www.wercker.com/). At present Wercker will build and deploy static site contents from GitHub, BitBucket and GitLab. Let's use GitHub. 
 
 
-#### Creating a Wercker App
+##### Creating a Wercker App
 
 Begin by signing up for an account on the Wercker site using the "Get Started for free" option. Signing up using GitHub is the simplest option. 
 
