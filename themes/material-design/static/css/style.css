@@ -5,7 +5,8 @@ nav .brand-logo {
   color: #444;
 }
 p {
-  line-height: 2rem;
+  font-size: 100%;
+  line-height: 1.5rem;
 }
 
 .button-collapse {
@@ -63,6 +64,7 @@ footer.page-footer {
 }
 
 /*
+images: center, float left or right 
 ![your_img](/img/your_img.png#center)
 ![your_img](/img/your_img.png#floatleft)
 ![your_img](/img/your_img.png#floatright)
